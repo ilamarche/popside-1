@@ -1,1 +1,67 @@
 /* Home specific style */
+
+.hero {
+    text-align: center;
+    color: #fff;
+}
+
+.about {
+    &-wrapper {
+        background: $grey;
+    }
+    &-inner {
+        display: flex;
+    }
+    &-desc,
+    &-details {
+        width: 50%;
+    }
+    &-desc {
+        background: $secondary;
+        color: #fff;
+    }
+    &-list {
+        list-style: none;
+    }
+}
+
+.expertise {
+    &-wrapper {
+        text-align: center;
+    }
+    &-tags {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    &-list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+}
+
+.team {
+    &-wrapper {
+        color: #fff;
+    }
+}
+
+.uses {
+    &-list {
+        display: flex;
+        margin: 0 $gutter * -1;
+        list-style: none;
+        &-item {
+            width: 25%;
+            padding: 0 $gutter;
+        }
+    }
+}
+
+.contact {
+    &-wrapper {
+        background: $grey;
+    }
+}

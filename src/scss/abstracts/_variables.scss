@@ -1,7 +1,11 @@
 // Variables 🧮 //
 
 // Colors 🎨
-$txt: #000;
+$txt: #090400;
+$primary: #173442;
+$secondary: #4774f3;
+$tertiary: #ef6753;
+$grey: #f0eded;
 
 // Fonts ✍
 $font: serif;
@@ -10,7 +14,8 @@ $font: serif;
 $gutter: 20px;
 
 // Mediaqueries 📱
-$container: 1400px;
+$container-big: 1920px;
+$container: 1670px;
 $desktop-large: 1280px;
 $desktop: 1100px;
 $desktop-small: 960px;

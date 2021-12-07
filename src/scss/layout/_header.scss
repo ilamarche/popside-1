@@ -1,1 +1,16 @@
 /* Header */
+
+.header {
+    color: #fff;
+}
+
+.nav,
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 45%;
+}

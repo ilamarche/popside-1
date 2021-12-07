@@ -4,8 +4,16 @@
     overflow-x: hidden;
 }
 
+.container,
+.container-big {
+    padding: 0 $gutter * 2;
+    margin: 0 auto;
+}
+
+.container-big {
+    max-width: $container-big;
+}
+
 .container {
     max-width: $container;
-    padding: 0 $gutter;
-    margin: 0 auto;
 }
