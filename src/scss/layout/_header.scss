@@ -1,6 +1,13 @@
 /* Header */
 
 .header {
+    width: 100%;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    z-index: 100;
+    font-family: $mono;
+    font-size: 1.8rem;
     color: #fff;
 }
 
@@ -11,6 +18,22 @@
     align-items: center;
 }
 
+.nav {
+    position: relative;
+    &::after {
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: $gutter * 2;
+        right: $gutter * 2;
+        background: #fff;
+    }
+}
+
 .menu {
     width: 45%;
+    a {
+        text-decoration: none;
+    }
 }
