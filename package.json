@@ -14,7 +14,7 @@
     "author": "izica <artemiztomska@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "gsap": "^3.8.0"
+        "gsap": "file:gsap-bonus.tgz"
     },
     "devDependencies": {
         "@babel/core": "^7.2.2",

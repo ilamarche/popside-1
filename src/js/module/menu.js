@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import { gsap, ScrollToPlugin } from 'gsap/all';
 
 const handleMenu = () => {
     const menu = document.getElementById('menu');
@@ -13,6 +13,7 @@ const handleMenu = () => {
     const b3 = burger.querySelector('#b3');
 
     const items = menu.querySelectorAll('li');
+    const links = menu.querySelectorAll('a');
 
     const tl = gsap.timeline({ paused: true });
 
@@ -39,6 +40,8 @@ const handleMenu = () => {
         main.classList.add('menu-on');
     };
 
+    gsap.registerPlugin(ScrollToPlugin);
+
     tl.to(burger, 0.1, { rotation: -135, scaleX: 0.26 }, 0);
     tl.to(b1, 0.1, { y: 12 }, 0);
     tl.to(b3, 0.1, { y: -12 }, 0);
@@ -51,6 +54,11 @@ const handleMenu = () => {
     }, false);
 
     menu.addEventListener('click', closeMenu, false);
+
+    links.forEach(link => link.addEventListener('click', e => {
+        e.preventDefault();
+        gsap.to(window, 0.5, { scrollTo: e.target.hash });
+    }, false));
 };
 
 export default handleMenu;

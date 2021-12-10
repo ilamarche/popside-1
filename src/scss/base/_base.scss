@@ -164,6 +164,9 @@ a {
     &:active {
         filter: saturate(200%);
     }
+    &:focus {
+        outline: 0;
+    }
 }
 
 /******* CLASSES GENERALES  *******/

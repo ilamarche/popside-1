@@ -23,10 +23,12 @@
             <include>_header.html</include>
 
             <main role="main" class="main" id="main">
-                <header class="hero">
+                <header class="hero" id="hero">
                     <div class="container">
                         <h1>Immersions numériques</h1>
-                        <h2 class="hero-subtitle">Nous concevons des dispositifs numériques interactif pour tous les publics de musées, tourisme et marques.</h2>
+                        <h2 id="catchphrase" class="hero-subtitle">
+                            <span>&nbsp;Nous concevons des dispositifs numériques interactif pour tous les publics de musées, tourisme et marques.</span>
+                        </h2>
                     </div>
                 </header>
 
@@ -50,15 +52,22 @@
                         <div class="about-details">
                             <ul class="about-list">
                                 <li class="about-list-item">
-                                    <h3>Créativité</h3>
+                                    <h3 class="js-svg-wrapper about-list-item-title">
+                                        <svg class="about-list-item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                                            <path class="js-path" fill='none' stroke='#173442' stroke-width='7' d="M362.37,327.58q-15.64,15.63-15.66,62.61V405.8H252.84V390.19q0-46.95-15.65-62.61c-36.39-36.38-40.47-92.31-3.78-128.95a93.82,93.82,0,0,1,132.68-.06l.05.06C402.83,235.27,400,289.94,362.37,327.58Z" />
+                                            <line class="js-path" fill='none' stroke='#173442' stroke-width='7' x1="248.29" y1="429.27" x2="350.37" y2="429.27" />
+                                            <circle class="js-path" fill='none' stroke='#173442' stroke-width='7' cx="300" cy="300" r="211.46" />
+                                        </svg>
+                                        Créativité
+                                    </h3>
                                     <p>C’est par là que les bonnes histoires commencent&nbsp;: une approche singulère et sensible qui permet de créer des expériences uniques et marquantes.</p>
                                 </li>
                                 <li class="about-list-item">
-                                    <h3>Technologie</h3>
+                                    <h3 class="about-list-item-title">Technologie</h3>
                                     <p>Nous développons des technologies maitrisées au service de l’utilisateur et de l’histoire qui se raconte. Les contenus font la part belle aux artifices technologiques.</p>
                                 </li>
                                 <li class="about-list-item">
-                                    <h3>Inclusivité</h3>
+                                    <h3 class="about-list-item-title">Inclusivité</h3>
                                     <p>Nous préconisons des technologies universelles (web), légères (mobile first) et ancrées dans le réel, pour renforcer le lien avec le visiteur et créer de l’interaction.</p>
                                 </li>
                             </ul>
