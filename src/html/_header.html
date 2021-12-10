@@ -1,8 +1,15 @@
 <header role="banner" class="header">
     <nav class="container-big nav">
-        <a href="./">Popside</a>
+        <a href="./" class="logo">
+            <span class="sr-only">Popside</span>
+            <svg class="icon"><use xlink:href="#icon-popside"></use></svg>
+        </a>
 
-        <ul class="menu">
+        <button type="button" class="burger" id="burger">
+            Menu<div id="b1"></div><div id="b2"></div><div id="b3"></div>
+        </button>
+
+        <ul class="menu" id="menu">
             <li>
                 <a href="#a-propos">A propos</a>
             </li>

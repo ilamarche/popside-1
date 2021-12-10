@@ -1,1 +1,3 @@
-import './module/cat';
+import handleMenu from './module/menu';
+
+handleMenu();
