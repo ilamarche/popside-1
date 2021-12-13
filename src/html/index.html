@@ -12,7 +12,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
-    
+        
+        <style>
+            html{background: #173442}
+            .wrapper{opacity: 0}
+        </style>
+
         <script>document.getElementsByTagName('html')[0].className = 'js';</script>
     </head>
 
@@ -25,10 +30,22 @@
             <main role="main" class="main" id="main">
                 <header class="hero" id="hero">
                     <div class="container">
-                        <h1>Immersions numériques</h1>
+                        <h1 class="hero-title" id="shapes-title">
+                            Immersions numériques
+                        </h1>
                         <h2 id="catchphrase" class="hero-subtitle">
                             <span>&nbsp;Nous concevons des dispositifs numériques interactif pour tous les publics de musées, tourisme et marques.</span>
                         </h2>
+                        <div class="hero-visual" id="shapes">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.84 450" fill="#4774f3">
+                                <path class="js-shape" d="M224.05,225C224.05,101.06,123.59.6-.33.6V449.37C123.59,449.37,224.05,348.91,224.05,225Z" />
+                                <path class="js-shape" d="M224.05,6.91V443.05C322.39,419.23,395.42,330.64,395.42,225S322.39,30.74,224.05,6.91Z" />
+                                <path class="js-shape" d="M394.68,45.92V404a224.38,224.38,0,0,0,0-358.12Z" />
+                            </svg>
+                            <svg class="hero-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450">
+                                <path class="js-shape" fill="#ef6753" d="M450,225c0,124.26-100.74,225-225,225S0,349.26,0,225,100.74,0,225,0h0C349.26,0,450,100.73,450,225h0" />
+                            </svg>
+                        </div>
                     </div>
                 </header>
 
@@ -53,21 +70,34 @@
                             <ul class="about-list">
                                 <li class="about-list-item">
                                     <h3 class="js-svg-wrapper about-list-item-title">
-                                        <svg class="about-list-item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
-                                            <path class="js-path" fill='none' stroke='#173442' stroke-width='7' d="M362.37,327.58q-15.64,15.63-15.66,62.61V405.8H252.84V390.19q0-46.95-15.65-62.61c-36.39-36.38-40.47-92.31-3.78-128.95a93.82,93.82,0,0,1,132.68-.06l.05.06C402.83,235.27,400,289.94,362.37,327.58Z" />
-                                            <line class="js-path" fill='none' stroke='#173442' stroke-width='7' x1="248.29" y1="429.27" x2="350.37" y2="429.27" />
-                                            <circle class="js-path" fill='none' stroke='#173442' stroke-width='7' cx="300" cy="300" r="211.46" />
+                                        <svg class="about-list-item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" fill="none" stroke="#173442" stroke-width="8">
+                                            <circle class="js-path" cx="224.83" cy="225" r="220.93" />
+                                            <path class="js-path" d="M92.13,360.05c0-49.76,66.35-49.76,99.53-82.93,16.58-16.58-33.18-16.58-33.18-99.52q0-82.93,66.35-82.94t66.35,82.94c0,82.93-49.77,82.93-33.18,99.52,33.18,33.18,99.52,33.18,99.52,82.93" />
                                         </svg>
                                         Créativité
                                     </h3>
                                     <p>C’est par là que les bonnes histoires commencent&nbsp;: une approche singulère et sensible qui permet de créer des expériences uniques et marquantes.</p>
                                 </li>
                                 <li class="about-list-item">
-                                    <h3 class="about-list-item-title">Technologie</h3>
+                                    <h3 class="js-svg-wrapper about-list-item-title">
+                                        <svg class="about-list-item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" fill="none" stroke="#173442" stroke-width="8">
+                                            <circle class="js-path" cx="225.66" cy="225" r="220.93" />
+                                            <path class="js-path" d="M303.87,107.7V342.35a13,13,0,0,1-13,13H160.48a13,13,0,0,1-13-13V107.7a13,13,0,0,1,13-13H290.84A13,13,0,0,1,303.87,107.7Z" />
+                                            <line class="js-path" x1="211.55" y1="324.79" x2="239.77" y2="324.79" />
+                                        </svg>
+                                        Technologie
+                                    </h3>
                                     <p>Nous développons des technologies maitrisées au service de l’utilisateur et de l’histoire qui se raconte. Les contenus font la part belle aux artifices technologiques.</p>
                                 </li>
                                 <li class="about-list-item">
-                                    <h3 class="about-list-item-title">Inclusivité</h3>
+                                    <h3 class="js-svg-wrapper about-list-item-title">
+                                        <svg class="about-list-item-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" fill="none" stroke="#173442" stroke-width="8">
+                                            <path class="js-path" d="M290.16,253.82q-16.34,16.33-16.36,65.41v16.31H175.73V319.23q0-49.07-16.36-65.41c-38-38-42.27-96.45-4-134.73A98,98,0,0,1,294,119l.06.06C332.43,157.37,329.49,214.49,290.16,253.82Z" />
+                                            <line class="js-path" x1="170.97" y1="360.05" x2="277.63" y2="360.05" />
+                                            <circle class="js-path" cx="225" cy="225" r="220.93" />
+                                        </svg>
+                                        Inclusivité
+                                    </h3>
                                     <p>Nous préconisons des technologies universelles (web), légères (mobile first) et ancrées dans le réel, pour renforcer le lien avec le visiteur et créer de l’interaction.</p>
                                 </li>
                             </ul>
@@ -91,16 +121,27 @@
                         </ul>
 
                         <ul class="expertise-list">
-                            <li class="expertise-list-item">
-                                <h3>Les contenus</h3>
+                            <li class="expertise-list-item js-shape-wrapper" id="shape-circle">
+                                <svg class="expertise-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450">
+                                    <path class="js-shape-elts" fill="#ef6753" d="M450,225c0,124.26-100.74,225-225,225S0,349.26,0,225,100.74,0,225,0h0C349.26,0,450,100.73,450,225h0" />
+                                </svg>
+                                <h3 class="expertise-list-item-title">Les contenus</h3>
                                 <p>Captation 360° ou VR, expérience en réalité mixte&nbsp;: nous misons sur l’enrichissement de l’environnement par des contenus multimédias&nbsp;: son, image, vidéo, motion ou encore reconstitution</p>
                             </li>
-                            <li class="expertise-list-item">
-                                <h3>La diffusion</h3>
+                            <li class="expertise-list-item js-shape-wrapper" id="shape-arcs">
+                                <svg class="expertise-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.84 450" fill="#4774f3">
+                                    <path class="js-shape-elts" d="M224.05,225C224.05,101.06,123.59.6-.33.6V449.37C123.59,449.37,224.05,348.91,224.05,225Z" />
+                                    <path class="js-shape-elts" d="M224.05,6.91V443.05C322.39,419.23,395.42,330.64,395.42,225S322.39,30.74,224.05,6.91Z" />
+                                    <path class="js-shape-elts" d="M394.68,45.92V404a224.38,224.38,0,0,0,0-358.12Z" />
+                                </svg>
+                                <h3 class="expertise-list-item-title">La diffusion</h3>
                                 <p>Outil de création de visites enrichies in situ et déclinables en distanciel pur&nbsp;: nous capitalisons sur tous vos canaux, pour élargir vos publics (géographiques ou empêchés)</p>
                             </li>
-                            <li class="expertise-list-item">
-                                <h3>L'intéractivité</h3>
+                            <li class="expertise-list-item js-shape-wrapper" id="shape-oval">
+                                <svg class="expertise-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.92 450">
+                                    <path class="js-shape-elts" fill="#294351" d="M28.54,410.38c62.07,69.36,205.26,42.45,319.82-60.05s157.1-241.87,95-311.22S238.13-3.36,123.57,99.17-33.53,341,28.54,410.38" />
+                                </svg>
+                                <h3 class="expertise-list-item-title">L'intéractivité</h3>
                                 <p>Outil pensé pour faire naître l’engagement des utilisateurs.
                                 Nous créons des mécaniques conversationnelles pour dynamiser vos relations avec vos publics&nbsp;: gaming, bonusing, récolte de feedback, viralité…</p>
                             </li>
@@ -121,7 +162,7 @@
                                 Popside c’est la rencontre entre 2 passionnés, accompagnés d’un collectif pluridisciplinaire de créatifs, designers, game designers… Cette organisation permet de répondre aux diverses productions en allouant les justes ressources et compétences.<br>
                                 Nous sommes enthousiastes à toute proposition de collaboration, de la formation sur les dispositifs immersifs à la concrétisation de vos projets. Contactez-nous, nous vous répondrons au plus vite.
                             </p>
-                            <p><a href="#contact">Contact</a></p>
+                            <p><a class="link" href="#contact">Contact</a></p>
                         </div>
                     </div>
                 </section>

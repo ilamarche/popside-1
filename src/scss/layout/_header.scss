@@ -20,9 +20,9 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background: $primary;
-    transition: transform $transition;
+    transition: transform $transition, background $transition;
     .small & {
+        background: $primary;
         transform: translate3d(0, -30px, 0);
         &::after {
             top: auto;

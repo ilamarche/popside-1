@@ -1,11 +1,11 @@
-import handleHeader from './module/header';
+import handleLoad from './module/load';
 import handleMenu from './module/menu';
-import handleCatchphrase from './module/catchphrase';
 import handleSvgs from './module/svgs';
+import handleShapes from './module/shapes';
 
 window.addEventListener('DOMContentLoaded', () => {
-    handleHeader();
+    handleLoad();
     handleMenu();
-    handleCatchphrase();
     handleSvgs();
+    handleShapes();
 });

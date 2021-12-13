@@ -1,1 +1,21 @@
 /* Buttons */
+
+.link {
+    display: inline-block;
+    position: relative;
+    &::after {
+        content: '→';
+        position: absolute;
+        top: 0;
+        left: -25px;
+        text-decoration: none;
+        transition: 0.2s $transition;
+    }
+    &:hover,
+    &:focus {
+        transform: translate3d(10px, 0, 0);
+        &::after {
+            transform: translate3d(5px, 0, 0);
+        }
+    }
+}

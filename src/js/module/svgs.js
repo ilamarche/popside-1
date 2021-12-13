@@ -8,29 +8,19 @@ const handleSvgs = () => {
 
     const paths = document.querySelectorAll('.js-path');
 
-    let lastScrollPos = 0;
-    let tick = false;
-
-    const animSvgs = (scrollPos) => {
-        svgs.forEach(svg => {
-            if (scrollPos + window.innerHeight > svg.offsetTop + 300) {
-                gsap.to(svg.querySelectorAll('.js-path'), 0.5, { drawSVG: '100%' });
+    let observer = new IntersectionObserver(entries => { 
+        entries.forEach(entry => {
+            if (entry.intersectionRatio > 0.2) {
+                gsap.to(entry.target.querySelectorAll('.js-path'), 0.5, { drawSVG: '100%' });
+                observer.unobserve(entry.target);
             }
         });
-    };
-
-    window.addEventListener('scroll', () => {
-        lastScrollPos = window.scrollY;
-
-        if (!tick) {
-            window.requestAnimationFrame(() => {
-                animSvgs(lastScrollPos);
-                tick = false;
-            });
-
-            tick = true;
-        }
+    },
+    {
+        threshold: 1.0
     });
+
+    svgs.forEach(svg => observer.observe(svg));
 
     gsap.registerPlugin(DrawSVGPlugin);
     gsap.set(paths, { drawSVG: 0 });

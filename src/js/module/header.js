@@ -1,14 +1,11 @@
-const handleHeader = () => {
-    const header = document.getElementById('header');
-    const hero = document.getElementById('hero');
-
+const handleHeader = (header, hero) => {
     if (!header || !hero) return;
 
     let lastScrollPos = 0;
     let tick = false;
 
     const animHeader = (scrollPos) => {
-        if (scrollPos > 100) {
+        if (scrollPos > 50) {
             header.classList.add('small');
             header.classList.add('off');
 

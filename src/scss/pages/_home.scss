@@ -4,11 +4,16 @@
     display: flex;
     align-items: center;
     padding: 150px 0 250px;
-    height: 95vh;
+    height: 100vh;
     min-height: 700px;
     position: relative;
+    overflow: hidden;
     text-align: center;
     color: #fff;
+    &-title {
+        position: relative;
+        z-index: 1;
+    }
     &-subtitle {
         display: flex;
         padding: $gutter 0;
@@ -24,6 +29,20 @@
         > span {
             display: block;
         }
+    }
+    &-visual {
+        display: flex;
+        width: 80%;
+        max-width: 940px;
+        position: absolute;
+        top: 0;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    &-circle {
+        margin: 0 0 0 1px;
     }
 }
 
@@ -101,7 +120,13 @@
         list-style: none;
         &-item {
             padding: 0 5% 10px;
+            &-title {
+                color: $primary;
+            }
         }
+    }
+    &-svg {
+        height: 130px;
     }
 }
 
@@ -174,6 +199,11 @@
     a {
         display: block;
         color: $primary;
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(0.9);
+        }
     }
     .icon {
         width: 30px;
