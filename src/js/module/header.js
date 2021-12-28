@@ -30,6 +30,8 @@ const handleHeader = (header, hero) => {
             tick = true;
         }
     });
+
+    animHeader(window.scrollY);
 };
 
 export default handleHeader;

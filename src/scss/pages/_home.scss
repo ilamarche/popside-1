@@ -1,60 +1,16 @@
 /* Home specific style */
 
-.hero {
-    display: flex;
-    align-items: center;
-    padding: 150px 0 250px;
-    height: 100vh;
-    min-height: 700px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    color: #fff;
-    &-title {
-        position: relative;
-        z-index: 1;
-    }
-    &-subtitle {
-        display: flex;
-        padding: $gutter 0;
-        margin: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        font-size: 2rem;
-        white-space: nowrap;
-        background: #fff;
-        color: $primary;
-        > span {
-            display: block;
-        }
-    }
-    &-visual {
-        display: flex;
-        width: 80%;
-        max-width: 940px;
-        position: absolute;
-        top: 0;
-        bottom: 60px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    &-circle {
-        margin: 0 0 0 1px;
-    }
-}
-
 .about {
     &-wrapper {
-        background: $grey;
+        background: #fff;
     }
     &-desc,
     &-details {
         padding: 80px 0;
     }
     &-desc {
+        display: flex;
+        align-items: center;
         position: relative;
         z-index: 1;
         background: $secondary;
@@ -68,6 +24,14 @@
             bottom: 0;
             z-index: -1;
             background: $secondary;
+        }
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
     &-details {
@@ -98,31 +62,36 @@
 
 .expertise {
     &-wrapper {
-        padding: 80px 0;
+        padding: 0 0 80px;
         text-align: center;
     }
     &-tags {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 50px -40px 70px;
-        list-style: none;
+        padding: 30px 0;
+        margin: 0 0 70px;
+        background: $grey;
+        &-list {
+            display: flex;
+            margin: 0;
+            list-style: none;
+            flex-shrink: 0;
+            will-change: transform;
+        }
     }
     &-tag {
-        padding: 5px 15px;
-        border: 1px solid;
-        margin: 0 5px 10px;
-        font-size: 1.6rem;
+        padding: 6px 15px;
+        border: 2px solid;
+        margin: 0 10px;
         border-radius: 22px;
+        font-weight: 700;
         line-height: 1;
+        flex-shrink: 0;
+        background: #fff;
     }
     &-list {
         list-style: none;
         &-item {
-            padding: 0 5% 10px;
-            &-title {
-                color: $primary;
-            }
+            padding: 0 5% 50px;
         }
     }
     &-svg {
@@ -135,13 +104,16 @@
         color: #fff;
     }
     &-text {
-        padding: 0 0 80px;
+        padding: 0 0 100px;
+    }
+    &-btn {
+        margin: 2.5em 0 0;
     }
     &-visual {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 80px 0;
+        padding: 100px 0;
         position: relative;
         z-index: 1;
         &::after {
@@ -162,7 +134,7 @@
 
 .uses {
     &-wrapper {
-        padding: 80px 0;
+        padding: 100px 0;
     }
     &-list {
         margin: 0 $gutter * -1;
@@ -183,9 +155,25 @@
 
 .contact {
     &-wrapper {
-        padding: 80px 0;
+        overflow: hidden;
         background: $grey;
-        color: $primary;
+        .container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1100px;
+                height: 270px;
+                bottom: -2%;
+                right: 100%;
+                background: url(../img/logo-big.png) no-repeat 0 0 / 100%;
+                opacity: 0.05;
+                transform-origin: 100% 100%;
+                transform: translate3d(0, 0, 0) rotate(90deg);
+            }
+        }
     }
 }
 
@@ -198,7 +186,8 @@
     }
     a {
         display: block;
-        color: $primary;
+        will-change: transform;
+        transition: 0.2s ease-out;
         &:hover,
         &:focus {
             opacity: 1;
@@ -230,12 +219,25 @@
             }
         }
     }
+
+    .contact {
+        &-wrapper {
+            .container {
+                &::after {
+                    opacity: 0.8;
+                }
+            }
+        }
+        &-inner {
+            padding: 0 0 0 63%;
+        }
+    }
 }
 
 @media (min-width: $tablet) {
-    .hero {
-        &-subtitle {
-            font-size: 3.5rem;
+    .contact {
+        &-inner {
+            padding: 0 0 0 50%;
         }
     }
 }
@@ -300,13 +302,19 @@
             }
         }
     }
+
+    .contact {
+        &-inner {
+            padding: 0 0 0 40%;
+        }
+    }
 }
 
 @media (min-width: $desktop) {
     .expertise {
         &-tag {
-            padding: 5px 20px 6px;
-            margin-bottom: 15px;
+            padding: 8px 20px 6px;
+            margin: 0 25px;
             font-size: 1.8rem;
         }
         &-list {
@@ -330,7 +338,6 @@
 @media (min-width: $desktop-large) {
     .expertise {
         &-tag {
-            margin-bottom: 25px;
             font-size: 2rem;
         }
     }

@@ -24,8 +24,9 @@ body {
 }
 
 h1,
-h2 {
-    font-weight: 400;
+h2,
+strong {
+    font-weight: 700;
 }
 
 h3,
@@ -36,16 +37,14 @@ h6 {
 }
 
 h1 {
-    font-family: $mono;
-    font-size: 12vw;
-    line-height: 1;
     margin: 0;
+    font-size: 12vw;
+    line-height: 1.1;
 }
 
 h2 {
-    font-family: $mono;
     font-size: 4.5rem;
-    margin: 0 0 1em;
+    margin: 0 0 2em;
 }
 
 h3 {
@@ -162,7 +161,7 @@ hr {
 
 a {
     color: inherit;
-    transition: opacity $transition, filter $transition;
+    transition: filter $transition;
     &:active {
         filter: saturate(200%);
     }
@@ -171,7 +170,7 @@ a {
     }
     &:hover,
     &:focus {
-        opacity: 0.7;
+        text-decoration: none;
     }
 }
 
@@ -203,6 +202,16 @@ a {
     background: #fff;
 }
 
+.editor {
+    padding: 50px 0 150px;
+    .container {
+        max-width: 1000px;
+    }
+    h2 {
+        margin: 1em 0;
+    }
+}
+
 .icon {
     fill: currentColor;
     stroke: currentColor;
@@ -222,12 +231,38 @@ a {
     line-height: 1;
     .icon {
         height: 100%;
+        stroke: transparent;
     }
+    .logo-stroke {
+        transition: $transition;
+    }
+    &:hover,
+    &:focus {
+        .logo-stroke {
+            fill: transparent;
+            stroke: currentColor;
+        }
+    }
+}
+
+.big {
+    font-size: 3rem;
+}
+
+.strong-sentence {
+    display: block;
+    margin: 1em 0 2em;
 }
 
 @media (min-width: $tablet) {
     h1 {
         font-size: 10.8rem;
+    }
+}
+
+@media (min-width: $desktop) {
+    .big {
+        font-size: 4rem;
     }
 }
 

@@ -49,7 +49,7 @@
 .menu {
     margin: 0;
     position: absolute;
-    top: 15vh;
+    top: 30vh;
     left: 0;
     right: 0;
     text-align: center;
@@ -57,12 +57,29 @@
     opacity: 0;
     > li {
         position: relative;
-        margin: 0 0 8vh;
+        margin: 0 0 10vh;
         opacity: 0;
         transform: translate3d(0, -10px, 0);
     }
     a {
         text-decoration: none;
+        &::after {
+            content: '';
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            top: 8px;
+            left: -20px;
+            background: #fff;
+            transform: rotate(45deg) scale(0);
+            transition: 0.2s ease-out;
+        }
+        &:hover,
+        &:focus {
+            &::after {
+                transform: rotate(45deg) scale(1);
+            }
+        }
     }
 }
 
@@ -100,7 +117,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 60%;
+        width: 50%;
         position: static;
         visibility: visible !important;
         opacity: 1 !important;
@@ -118,6 +135,6 @@
 
 @media (min-width: $tablet) {
     .menu {
-        width: 45%;
+        width: 35%;
     }
 }
