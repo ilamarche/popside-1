@@ -1,0 +1,51 @@
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 0 0 0 40px;
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        transition: $transition;
+    }
+    &::before {
+        width: 24px;
+        height: 24px;
+        border: 2px solid;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: rotate(-45deg);
+    }
+    &::after {
+        width: 8px;
+        height: 8px;
+        left: 8px;
+        top: 8px;
+        bottom: 8px;
+        background: #fff;
+        transform: rotate(45deg);
+    }
+    > span {
+        display: block;
+        transition: $transition;
+    }
+    &:hover,
+    &:focus {
+        > span {
+            transform: translate3d(-10px, 0, 0);
+        }
+        &::before {
+            transform: scale(0.7) rotate(45deg);
+            opacity: 0;
+        }
+        &::after {
+            transform: scale(1.5) rotate(-45deg);
+        }
+    }
+}
