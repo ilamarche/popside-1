@@ -7,6 +7,7 @@
 
 .main {
     position: relative;
+    overflow-x: hidden;
     &::after {
         content: '';
         position: absolute;

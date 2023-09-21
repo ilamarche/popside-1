@@ -2,9 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
-  nitro: {
-    preset: 'service-worker'
-  },
+  plugins: ["~/plugins/lottie-vue-player.client.ts"],
   modules: ['nuxt-gtag'],
   vite: {
     css: {
