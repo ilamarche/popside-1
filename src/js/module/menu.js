@@ -55,12 +55,12 @@ const handleMenu = () => {
 
     menu.addEventListener('click', closeMenu, false);
 
-    links.forEach(link => link.addEventListener('click', e => {
-        if( e.target.dataset.home && location.pathname !== '/' ){
-            window.location.href = './' + e.target.hash;
+    links.forEach(link => link.addEventListener('click', (e) => {
+        if (e.target.dataset.home && location.pathname !== '/') {
+            window.location.href = `./${e.target.hash}`;
             return;
         }
-        
+
         e.preventDefault();
         gsap.to(window, 0.5, { scrollTo: e.target.hash, ease: 'power1.inOut' });
         e.target.blur();

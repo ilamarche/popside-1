@@ -8,8 +8,8 @@ const handleSvgs = () => {
 
     const paths = document.querySelectorAll('.js-path');
 
-    let observer = new IntersectionObserver(entries => { 
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
             if (entry.intersectionRatio > 0.2) {
                 gsap.to(entry.target.querySelectorAll('.js-path'), 0.5, { drawSVG: '100%' });
                 observer.unobserve(entry.target);
