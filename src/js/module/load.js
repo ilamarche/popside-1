@@ -27,12 +27,14 @@ const handleLoad = () => {
     heroBackgrounds.forEach((background) => {
         background.style.zIndex = -1;
         background.addEventListener('ended', () => {
-            background.style.zIndex = -1;
             indexCurrentBackground = indexCurrentBackground === heroBackgrounds.length - 1 ? 0 : indexCurrentBackground + 1;
             lottiePlayer._lottie.stop();
             lottiePlayer._lottie.play();
-            heroBackgrounds[indexCurrentBackground].style.zIndex = 0;
-            heroBackgrounds[indexCurrentBackground].play();
+            setTimeout(() => {
+                background.style.zIndex = -1;
+                heroBackgrounds[indexCurrentBackground].style.zIndex = 0;
+                heroBackgrounds[indexCurrentBackground].play();
+            }, 500);
         });
     });
     heroBackgrounds[0].style.zIndex = 0;
