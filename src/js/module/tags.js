@@ -2,7 +2,7 @@ import gsap from 'gsap';
 
 const handleTags = () => {
     const tags = document.getElementById('tags');
-    
+
     if (!tags) return;
 
     const list = tags.querySelector('.js-tags');

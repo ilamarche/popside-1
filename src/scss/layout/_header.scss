@@ -2,7 +2,7 @@
 
 .header {
     width: 100%;
-    padding: 30px 0 0;
+    padding: 0px 0 0;
     position: fixed;
     left: 0;
     z-index: 100;
@@ -10,6 +10,8 @@
     font-size: 3rem;
     color: #fff;
     transition: transform $transition;
+    background: $primary;
+    background: linear-gradient(180deg, rgba($primary,0.3477766106442577) 0%, rgba($primary,0) 100%);
     &.off {
         transform: translate3d(0, -100%, 0);
     }
@@ -23,7 +25,7 @@
     transition: transform $transition, background $transition;
     .small & {
         background: $primary;
-        transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -0px, 0);
         &::after {
             top: auto;
             bottom: 0;
@@ -33,9 +35,9 @@
         content: '';
         height: 1px;
         position: absolute;
-        top: 0;
-        left: $gutter * 2;
-        right: $gutter * 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background: #fff;
         transition: $transition;
     }
