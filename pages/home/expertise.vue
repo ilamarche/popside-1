@@ -1,19 +1,5 @@
 <template>
     <section id="expertise" class="bg-white expertise-wrapper">
-        <div class="expertise-tags" id="tags">
-            <ul class="expertise-tags-list js-tags">
-                <li class="expertise-tag">Conception de parcours transmédia</li>
-                <li class="expertise-tag">Design</li>
-                <li class="expertise-tag">Gestion de projets</li>
-                <li class="expertise-tag">Déploiement</li>
-                <li class="expertise-tag">Technologies 360° et 3D interactives</li>
-                <li class="expertise-tag">Maintenance</li>
-                <li class="expertise-tag">Production de contenus multimédias</li>
-                <li class="expertise-tag">Développement technologique</li>
-                <li class="expertise-tag">Conseil stratégique</li>
-            </ul>
-        </div>
-
         <div class="container">
             <h2 class="expertise-title">Nos expertises</h2>
 

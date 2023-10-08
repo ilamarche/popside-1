@@ -79,6 +79,15 @@
         </ul>
       </div>
     </div>
+    <div class="shape-3"></div>
+    <div class="shape-4"></div>
+    <div class="shape-5"></div>
+    <div class="shape-6"></div>
+    <div class="shape-7"></div>
+    <div class="shape-8"></div>
+    <div class="shape-9"></div>
+    <div class="shape-10"></div>
+    <div class="shape-11"></div>
   </section>
 </template>
 
@@ -109,6 +118,9 @@
     &-desc {
       padding: 80px 0 160px 0;
     }
+    &-details {
+      padding: 80px 10% 160px 0;
+    }
   }
 }
 @media (min-width: $desktop-large) {
@@ -118,4 +130,70 @@
     }
   }
 }
+
+.shape {
+  &-3 {
+    position: absolute;
+    height: 40px;
+    width: 100vw;
+    bottom: -20px;
+    left: 75%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: $secondary;
+    z-index: 1;
+  }
+  &-4 {
+    position: absolute;
+    height: 25px;
+    width: 100vw;
+    bottom: 10px;
+    left: 87.5%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: black;
+    z-index: 1;
+  }
+
+  &-8 {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    bottom: -20px;
+    right: 55%;
+    background-color: $tertiary;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  &-10 {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    bottom: -25px;
+    left: 60%;
+    background-color: $secondary;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &-11 {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    bottom: 20px;
+    left: 67.5%;
+    background-color: $tertiary;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+}
+
+@media (max-width: $phone) {
+    .shape {
+        &-8{
+            display: none;
+        }
+    }
+}
+
 </style>

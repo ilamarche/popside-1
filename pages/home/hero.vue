@@ -1,32 +1,20 @@
 <template>
   <header class="hero home-hero" ref="hero" id="hero">
     <div class="container">
-      <video
-        class="hero-background"
-        autoplay
-        muted
-        poster="~/assets/img/hero-background-1.png"
-      >
+      <video class="hero-background" autoplay muted poster="~/assets/img/hero-background-1.png">
         <source src="~/assets/video/hero-background-1.mp4" type="video/mp4" />
       </video>
-      <video
-        class="hero-background"
-        muted
-        poster="~/assets/img/hero-background-2.png"
-      >
+      <video class="hero-background" muted poster="~/assets/img/hero-background-2.png">
         <source src="~/assets/video/hero-background-2.mp4" type="video/mp4" />
       </video>
-      <LottieAnimation
-        ref="lplayer"
-        class="hero-transition"
-        :auto-play="false"
-        :animation-data="TransitionJSON"
-      />
-      <LottieAnimation
-        class="hero-transition"
-        :auto-play="false"
-        :animation-data="HabillageJSON"
-      />
+      <video class="hero-background" muted poster="~/assets/img/hero-background-3.png">
+        <source src="~/assets/video/hero-background-3.mp4" type="video/mp4" />
+      </video>
+      <video class="hero-background" muted poster="~/assets/img/hero-background-4.png">
+        <source src="~/assets/video/hero-background-4.mp4" type="video/mp4" />
+      </video>
+      <LottieAnimation ref="lplayer" class="hero-transition" :auto-play="false" :animation-data="TransitionJSON" />
+      <LottieAnimation class="hero-transition" :auto-play="false" :animation-data="HabillageJSON" />
       <h1 class="hero-title" id="title">
         <span>(Re)</span>
         Découvrons<br />
@@ -59,16 +47,14 @@ const handleLoad = () => {
     const isHeroRatioBigger =
       hero.value.offsetWidth / hero.value.offsetHeight > ratio;
     heroLottie.forEach((lottie) => {
-      lottie.style.width = `${
-        isHeroRatioBigger
+      lottie.style.width = `${isHeroRatioBigger
           ? hero.value.offsetWidth
           : hero.value.offsetHeight * ratio
-      }px`;
-      lottie.style.height = `${
-        isHeroRatioBigger
+        }px`;
+      lottie.style.height = `${isHeroRatioBigger
           ? hero.value.offsetWidth / ratio
           : hero.value.offsetHeight
-      }px`;
+        }px`;
     });
   }
 
@@ -137,8 +123,6 @@ onMounted(() => {
     object-fit: cover;
     position: absolute;
     left: 0;
-    right: 0;
-    top: 0;
     bottom: 0;
   }
 
@@ -158,7 +142,7 @@ onMounted(() => {
     bottom: 12.5rem;
     position: absolute;
 
-    > span {
+    >span {
       position: absolute;
       top: 5px;
       left: -2em;
@@ -191,6 +175,15 @@ onMounted(() => {
     &-title {
       bottom: 5rem;
       font-size: 5rem;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .hero {
+    &-transition:nth-of-type(2) {
+      transform: scale(0.7);
+      transform-origin: left bottom;
     }
   }
 }

@@ -3,6 +3,7 @@
 .about {
     &-wrapper {
         background: #fff;
+        position: relative;
     }
 
     &-desc,
@@ -82,39 +83,9 @@
     }
 
     &-wrapper {
-        padding: 0 0 180px;
+        padding: 120px 0;
         text-align: center;
         position: relative;
-    }
-
-    &-tags {
-        display: flex;
-        padding: 60px;
-        margin: 0 0 70px;
-        background: $grey;
-        overflow: hidden;
-
-        &-list {
-            display: flex;
-            margin: 0;
-            list-style: none;
-            flex-shrink: 0;
-            will-change: transform;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: center;
-            gap: 25px;
-        }
-    }
-
-    &-tag {
-        padding: 6px 15px;
-        border: 1.5px solid;
-        margin: 0;
-        border-radius: 22px;
-        line-height: 1;
-        flex-shrink: 0;
-        font-weight: 500;
     }
 
     &-list {
@@ -127,8 +98,44 @@
                 text-transform: uppercase;
                 color: $tertiary;
             }
+
             img {
                 height: 150px;
+            }
+        }
+    }
+
+    &-svg {
+        height: 130px;
+    }
+}
+
+.trust {
+    &-title {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px white;
+        font-size: 3em;
+    }
+
+    &-wrapper {
+        padding: 120px 0;
+        text-align: center;
+        position: relative;
+    }
+
+    &-list {
+        max-width: 1200px;
+        margin: auto;
+        list-style: none;
+        flex-flow: wrap;
+        display: flex;
+        justify-content: space-around;
+
+        &-item {
+            padding: 3rem;
+
+            img {
+                height: 80px;
             }
         }
     }
@@ -193,7 +200,7 @@
         margin: 0 $gutter * -1;
         list-style: none;
         justify-content: center;
-        
+
         &-item {
             padding: 0 $gutter 30px;
 
@@ -272,12 +279,14 @@
         &-list {
             &-item {
                 flex-direction: row;
+
                 &-svg {
                     margin: 0 30px 0 0;
                 }
             }
         }
     }
+
     .uses {
         &-list {
             display: flex;
@@ -319,6 +328,7 @@
             padding: 0 0 0 50%;
         }
     }
+
     .uses {
         &-list {
             display: flex;
@@ -343,7 +353,7 @@
         }
 
         &-desc {
-            padding-right: 10%;
+            padding-right: 7%;
 
             &::after {
                 width: 50vw;
@@ -351,7 +361,7 @@
         }
 
         &-details {
-            padding-left: 10%;
+            padding-left: 7%;
         }
     }
 
@@ -364,6 +374,16 @@
             &-item {
                 width: 33%;
                 padding: 0 3%;
+            }
+        }
+    }
+
+    .trust {
+        &-list {
+            &-item {
+                & img {
+                    height: 110px;
+                }
             }
         }
     }
@@ -440,6 +460,12 @@
         }
     }
 
+    .trust {
+        &-tag {
+            font-size: 2rem;
+        }
+    }
+
     .team {
         &-visual {
             &::after {
@@ -454,6 +480,21 @@
             &-item {
                 width: 33.3333333%;
                 padding-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop-small) and (max-width: $desktop-large) {
+    .about {
+        &-list {
+            &-item {
+                flex-direction: column;
+
+                &-svg {
+                    margin: 0;
+                    padding: 0.5em;
+                }
             }
         }
     }
