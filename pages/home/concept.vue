@@ -26,7 +26,7 @@
           </p>
         </div>
         <div class="shape-1"></div>
-        <div class="shape-2"></div>
+        <div class="shape-2 shape-pulse"></div>
       </div>
       <div class="about-details">
         <ul class="about-list">
@@ -79,15 +79,17 @@
         </ul>
       </div>
     </div>
-    <div class="shape-3"></div>
-    <div class="shape-4"></div>
+    <div class="shape-3 shape-right"></div>
+    <div class="shape-4 shape-right"></div>
     <div class="shape-5"></div>
     <div class="shape-6"></div>
     <div class="shape-7"></div>
-    <div class="shape-8"></div>
+    <div class="shape-8 shape-rotate"></div>
     <div class="shape-9"></div>
-    <div class="shape-10"></div>
-    <div class="shape-11"></div>
+    <div class="shape-10 shape-pulse"></div>
+    <div class="shape-11 shape-rotate"></div>
+    <div class="shape-12 shape-left"></div>
+    <div class="shape-13 shape-left"></div>
   </section>
 </template>
 
@@ -119,7 +121,15 @@
       padding: 80px 0 160px 0;
     }
     &-details {
-      padding: 80px 10% 160px 0;
+      padding: 80px 0 160px 0;
+    }
+
+    &-list {
+      &-item {
+        &-svg {
+          margin-top: 25px;
+        }
+      }
     }
   }
 }
@@ -186,14 +196,36 @@
     transform: rotate(45deg);
     z-index: 1;
   }
+  &-12 {
+    position: absolute;
+    height: 60px;
+    width: 100vw;
+    bottom: 15px;
+    right: 77.5%;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-color: $tertiary;
+    z-index: 1;
+  }
+  &-13 {
+    position: absolute;
+    height: 30px;
+    width: 100vw;
+    bottom: -5px;
+    right: 95.5%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: black;
+    z-index: 1;
+  }
 }
 
-@media (max-width: $phone) {
-    .shape {
-        &-8{
-            display: none;
-        }
+@media (min-width: $desktop-small) {
+  .shape {
+    &-12,
+    &-13 {
+      display: none;
     }
+  }
 }
-
 </style>

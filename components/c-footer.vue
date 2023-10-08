@@ -7,9 +7,7 @@
 
       <p class="footer-content">
         <span>
-          Réalisation&nbsp;:&nbsp;<a href="https://www.poissonbouge.fr/" target="_blank" rel="noopener noreferrer">Poisson
-            Bouge
-            Neico</a>&nbsp;/&nbsp;<a href="https://www.linkedin.com/in/karim-douis-282b9457/?originalSubdomain=fr"
+          Réalisation&nbsp;:&nbsp;<a href="https://www.linkedin.com/in/karim-douis-282b9457/?originalSubdomain=fr"
             target="_blank" rel="noopener noreferrer">Karim Douis</a>
         </span>
 
@@ -58,6 +56,7 @@
   &-inner {
     p {
       margin: 0;
+      opacity: 1 !important;
 
       +p {
         margin: 15px 0 0;

@@ -3,7 +3,7 @@
         <div class="container team-inner">
             <div class="team-visual">
                 <div>
-                    <img src="~/assets/img/equipe.jpg" alt="Marie Amiel & Ivain Lamarche">
+                    <img id="team-img" src="~/assets/img/equipe.jpg" alt="Marie Amiel & Ivain Lamarche">
                 </div>
             </div>
             <div class="team-text">
@@ -24,3 +24,9 @@
         </div>
     </section>
 </template>
+
+<style scoped lang="scss">
+#team-img {
+    opacity: 1;
+}
+</style>

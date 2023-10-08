@@ -1,16 +1,16 @@
 <template>
   <header class="hero home-hero" ref="hero" id="hero">
     <div class="container">
-      <video class="hero-background" autoplay muted poster="~/assets/img/hero-background-1.png">
+      <video class="hero-background" autoplay muted playsinline poster="~/assets/img/hero-background-1.png">
         <source src="~/assets/video/hero-background-1.mp4" type="video/mp4" />
       </video>
-      <video class="hero-background" muted poster="~/assets/img/hero-background-2.png">
+      <video class="hero-background" muted playsinline poster="~/assets/img/hero-background-2.png">
         <source src="~/assets/video/hero-background-2.mp4" type="video/mp4" />
       </video>
-      <video class="hero-background" muted poster="~/assets/img/hero-background-3.png">
+      <video class="hero-background" muted playsinline poster="~/assets/img/hero-background-3.png">
         <source src="~/assets/video/hero-background-3.mp4" type="video/mp4" />
       </video>
-      <video class="hero-background" muted poster="~/assets/img/hero-background-4.png">
+      <video class="hero-background" muted playsinline poster="~/assets/img/hero-background-4.png">
         <source src="~/assets/video/hero-background-4.mp4" type="video/mp4" />
       </video>
       <LottieAnimation ref="lplayer" class="hero-transition" :auto-play="false" :animation-data="TransitionJSON" />
@@ -114,12 +114,14 @@ onMounted(() => {
 
   &.home-hero {
     height: 100vh;
+    height: 100dvh;
     padding: 0;
   }
 
   &-transition {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     object-fit: cover;
     position: absolute;
     left: 0;
@@ -129,6 +131,7 @@ onMounted(() => {
   &-background {
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     object-fit: cover;
     position: absolute;
     left: 0;
